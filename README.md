@@ -14,10 +14,7 @@
 
 ## ⚡ About Me
 
-```yaml
-## ⚡ About Me
 
-```yaml
 name: Naveed Nawaz
 title: Software Developer
 based_in: Sri Lanka
