@@ -15,23 +15,41 @@
 ## ⚡ About Me
 
 ```yaml
-name: Naveed Nawaz
-location: Sri Lanka
-role: Software Developer
-specialization:
-  - Flutter Development
-  - React Applications
-  - Java Development
-  - UI/UX Design
-  - Blender 3D Modeling
+## ⚡ About Me
 
-currently_learning:
-  - Advanced Flutter
-  - MERN Stack
-  - System Design
+```yaml
+name: Naveed Nawaz
+title: Software Developer
+based_in: Sri Lanka
+
+identity:
+  - Flutter Developer
+  - React Frontend Developer
+  - Java Backend Developer
+  - UI/UX Enthusiast
+  - Blender 3D Artist
+
+passion:
+  "Turning ideas into smooth, modern, and impactful digital experiences"
+
+currently_working_on:
+  - Cross-platform mobile apps with Flutter
+  - Full-stack web applications (React + Node.js)
+  - UI/UX improvements for real-world systems
+
+tech_focus:
+  - Clean Architecture
+  - Scalable Frontend Design
+  - API Integration
+  - Performance Optimization
+
+mindset:
+  - "Code is not just logic, it's experience"
+  - "Simplicity beats complexity"
+  - "Design matters as much as functionality"
 
 goal:
-  Build impactful software with beautiful user experiences
+  "To build products that look premium, feel smooth, and solve real problems"
 ```
 
 ---
