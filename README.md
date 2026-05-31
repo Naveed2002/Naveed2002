@@ -21,6 +21,5 @@
 
 ## 🌐 Connect With Me
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://linkedin.com/in/yourprofile](https://github.com/Naveed2002/Naveed2002
 
-Portfolio: https://yourwebsite.com
