@@ -1,4 +1,4 @@
-# Hi 👋, I'm Your Name
+# Hi 👋, I'm Naveed Nawaz
 
 ### Flutter Developer | React Developer | Java Developer | Blender Artist
 
@@ -17,9 +17,7 @@
 
 ![Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
 
-## 🔥 Streak
 
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME)
 
 ## 🌐 Connect With Me
 
