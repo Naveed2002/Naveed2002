@@ -1,16 +1,10 @@
-<!-- ===================== NEON HEADER ===================== -->
+## ⚡ About Me
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=28&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=900&lines=Hi+I'm+Naveed+Nawaz;Flutter+%7C+React+%7C+Java+Developer;UI%2FUX+Focused+Software+Engineer;Building+Modern+Digital+Experiences" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Naveed2002&style=for-the-badge&color=0e75b6" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Software+Developer;Flutter+%7C+React+%7C+Java+Developer;UI%2FUX+Focused+Engineer;Clean+Code+Enthusiast" />
 </p>
 
 ---
-
-## ⚡ About Me
 
 ```yaml
 name: Naveed Nawaz
