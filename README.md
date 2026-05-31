@@ -1,16 +1,28 @@
-## Hi there 👋
+# Hi 👋, I'm Your Name
 
-<!--
-**Naveed2002/Naveed2002** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Flutter Developer | React Developer | Java Developer | Blender Artist
 
-Here are some ideas to get you started:
+## 👨‍💻 About Me
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🔭 Building Mobile & Web Applications
+- 🌱 Learning Advanced Flutter and MERN
+- 💬 Ask me about Flutter, React, Java, Blender
+- ⚡ Passionate about UI/UX Design
+
+## 🛠 Skills
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,react,nodejs,java,mongodb,firebase,git,github,blender,vscode" />
+
+## 📊 GitHub Stats
+
+![Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
+
+## 🔥 Streak
+
+![Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME)
+
+## 🌐 Connect With Me
+
+LinkedIn: https://linkedin.com/in/yourprofile
+
+Portfolio: https://yourwebsite.com
