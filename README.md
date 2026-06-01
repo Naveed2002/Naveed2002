@@ -1,56 +1,4 @@
 
-Claude finished the response
-i need a github dashboard as a flutter mobile app developer
-name-naveed nawaz
-give nice ui modern futeristic ui fro the dashboard
-
-16:45
-
-Reading frontend design skill
-Reading frontend design skill
-
-Reading frontend design skill
-Done
-
-
-Here's your GitHub Dashboard — built with a dark, cyberpunk-futuristic aesthetic tailored for a Flutter developer. Here's what's packed in:
-
-Sections included:
-
-Header — Avatar with initials, name, handle, and a live "Active" pulse indicator
-Stats bar — Repos, Followers, and Stars at a glance
-Contribution graph — Visual heatmap showing activity intensity across weeks
-Top Repositories — 3 pinned repos with language badges, stars, forks & last updated time
-Language Breakdown — Animated bar chart (Dart dominates at 72%, as expected!)
-Pull Requests — Open, In-Review, and Merged PRs with color-coded status dots
-Recent Activity — Push, PR, Star, and Fork events with timestamps
-Footer stats — Open issues, commits/month, and following count
-The color scheme uses a neon teal + electric blue + orange palette on a deep navy background — giving it that futuristic developer vibe. All Flutter/Dart repos are front and center!
-
-give the code readme.md code
-
-16:46
-
-Viewed a file, created a file, read a file
-Viewed a file, created a file, read a file
-Here's your README.md — fully documented and ready to drop into your repo! It includes:
-
-Badges for UI style, Flutter, and active status
-Feature list with emoji labels for every dashboard section
-Design system table — all colors, fonts, and tokens used
-Project structure tree
-Getting started — browser open + local server options (Python & Node)
-Tech stack table — HTML/CSS/JS, Google Fonts, Tabler Icons
-Customization guide — how to swap in your real GitHub data
-Live GitHub API snippet — optional fetch integration
-ASCII layout preview — visual map of every section
-Author section with GitHub and Flutter badges
-
-Readme
-Document · MD 
-no i need the code for copy and paste in readme in github then it will give the ui
-
-16:47
 ## ⚡ About Me
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Software+Developer;Flutter+%7C+React+%7C+Java+Developer;UI%2FUX+Focused+Engineer;Clean+Code+Enthusiast" />
@@ -223,43 +171,7 @@ mindset:
 </div>
 ---
  
-## 📈 Contribution Graph
- 
-<div align="center">
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=naveed-nawaz&bg_color=0D1117&color=00F7FF&line=00F7FF&point=FF6B6B&area=true&area_color=00F7FF&hide_border=false&border_color=30363D&radius=8)](https://github.com/ashutosh00710/github-readme-activity-graph)
- 
-</div>
----
- 
-## 🏆 GitHub Trophies
- 
-<div align="center">
-[![trophy](https://github-profile-trophy.vercel.app/?username=naveed-nawaz&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=6)](https://github.com/ryo-ma/github-profile-trophy)
- 
-</div>
----
- 
-## 📌 Featured Projects
- 
-<div align="center">
-[![flutter_ui_kit](https://github-readme-stats.vercel.app/api/pin/?username=naveed-nawaz&repo=flutter_ui_kit&theme=transparent&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=10)](https://github.com/naveed-nawaz/flutter_ui_kit)
-&nbsp;
-[![nav_animations](https://github-readme-stats.vercel.app/api/pin/?username=naveed-nawaz&repo=nav_animations&theme=transparent&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=10)](https://github.com/naveed-nawaz/nav_animations)
- 
-</div>
----
- 
-## 🤝 Connect
- 
-<div align="center">
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Naveed%20Nawaz-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/naveed-nawaz)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-00F7FF?style=for-the-badge&logo=vercel&logoColor=0D1117)](https://naveeddev.com)
-[![Email](https://img.shields.io/badge/Email-Say%20Hello-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:naveed@example.com)
- 
-</div>
----
- 
-<div align="center">
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:00F7FF,100:0D1117&height=120&section=footer" width="100%"/>
 *"Design first, then code. Simple solutions win. Details create experience."*
  
