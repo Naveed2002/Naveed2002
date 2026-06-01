@@ -1,326 +1,269 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Naveed Nawaz — GitHub Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet"/>
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --accent:#00F5A0;--accent2:#00D4FF;--accent3:#FF6B35;
-    --bg:#090E1A;--bg2:#0D1528;--bg3:#111B35;
-    --border:#1E2D50;--text:#E2E8F8;--muted:#5A6A8A;--dim:#8A9ABE;
-  }
-  body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;max-width:420px;margin:0 auto;overflow-x:hidden}
-  .mono{font-family:'Space Mono',monospace}
 
-  /* HEADER */
-  .header{background:var(--bg2);border-bottom:1px solid var(--border);padding:16px;display:flex;align-items:center;gap:12px;position:relative}
-  .header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3))}
-  .avatar{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#00F5A0,#00D4FF);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#090E1A;flex-shrink:0;font-family:'Syne',sans-serif}
-  .name{font-size:17px;font-weight:800;color:var(--text);letter-spacing:-0.3px}
-  .handle{font-size:11px;color:var(--accent);font-family:'Space Mono',monospace;margin-top:3px}
-  .role{font-size:10px;color:var(--dim);margin-top:2px}
-  .badge{margin-left:auto;background:rgba(0,245,160,0.1);border:1px solid rgba(0,245,160,0.3);border-radius:6px;padding:4px 10px;font-size:10px;font-family:'Space Mono',monospace;color:var(--accent);display:flex;align-items:center;gap:5px;white-space:nowrap}
-  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(0.75)}}
+Claude finished the response
+i need a github dashboard as a flutter mobile app developer
+name-naveed nawaz
+give nice ui modern futeristic ui fro the dashboard
 
-  /* STATS */
-  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-  .stat{background:var(--bg2);padding:14px 8px;text-align:center}
-  .stat-num{font-size:22px;font-weight:800;font-family:'Space Mono',monospace;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-  .stat-label{font-size:9px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.9px}
+16:45
 
-  /* SECTIONS */
-  .section{padding:16px}
-  .sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-  .sec-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.4px;color:var(--dim);font-family:'Space Mono',monospace}
-  .sec-tag{font-size:10px;font-family:'Space Mono',monospace;color:var(--accent2);background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);padding:2px 8px;border-radius:4px}
-  .divider{height:1px;background:var(--border)}
+Reading frontend design skill
+Reading frontend design skill
 
-  /* CONTRIBUTION GRID */
-  .contrib-grid{display:grid;grid-template-columns:repeat(26,1fr);gap:2px;margin-bottom:8px}
-  .cell{aspect-ratio:1;border-radius:2px;background:var(--bg3)}
-  .c1{background:rgba(0,245,160,0.15)}.c2{background:rgba(0,245,160,0.35)}.c3{background:rgba(0,245,160,0.6)}.c4{background:rgba(0,245,160,0.9)}
-  .contrib-footer{display:flex;align-items:center;justify-content:space-between}
-  .contrib-total{font-size:11px;color:var(--dim);font-family:'Space Mono',monospace}
-  .legend{display:flex;align-items:center;gap:3px}
-  .legend span{font-size:9px;color:var(--muted)}
-  .lg{width:9px;height:9px;border-radius:2px}
+Reading frontend design skill
+Done
 
-  /* REPOS */
-  .repo-list{display:flex;flex-direction:column;gap:8px}
-  .repo{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:13px 14px;transition:border-color .2s,transform .15s}
-  .repo:hover{border-color:rgba(0,245,160,0.35);transform:translateY(-1px)}
-  .repo-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px}
-  .repo-name{font-size:13px;font-weight:700;color:var(--accent2);font-family:'Space Mono',monospace}
-  .repo-lang{font-size:10px;padding:2px 8px;border-radius:4px;font-family:'Space Mono',monospace;border:1px solid;white-space:nowrap}
-  .lang-dart{color:#54C5F8;border-color:rgba(84,197,248,.3);background:rgba(84,197,248,.08)}
-  .lang-js{color:#F7DF1E;border-color:rgba(247,223,30,.3);background:rgba(247,223,30,.08)}
-  .lang-kt{color:#A97BFF;border-color:rgba(169,123,255,.3);background:rgba(169,123,255,.08)}
-  .repo-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px}
-  .repo-meta{display:flex;align-items:center;gap:12px}
-  .meta-item{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--dim);font-family:'Space Mono',monospace}
-  .star-icon{color:#FFB800}.fork-icon{color:var(--accent2)}
-  .updated{font-size:10px;color:var(--muted);margin-left:auto}
 
-  /* LANGUAGE BARS */
-  .lang-bars{display:flex;flex-direction:column;gap:10px}
-  .lang-row{display:flex;align-items:center;gap:10px}
-  .lang-name{font-size:11px;font-family:'Space Mono',monospace;color:var(--dim);width:54px;flex-shrink:0}
-  .lang-bar-wrap{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
-  .lang-bar{height:100%;border-radius:3px}
-  .lb-dart{background:linear-gradient(90deg,#54C5F8,#00D4FF)}
-  .lb-kt{background:linear-gradient(90deg,#A97BFF,#7B53D4)}
-  .lb-js{background:linear-gradient(90deg,#F7DF1E,#FFB800)}
-  .lb-py{background:linear-gradient(90deg,#00F5A0,#0BD08A)}
-  .lang-pct{font-size:10px;font-family:'Space Mono',monospace;color:var(--muted);width:32px;text-align:right}
+Here's your GitHub Dashboard — built with a dark, cyberpunk-futuristic aesthetic tailored for a Flutter developer. Here's what's packed in:
 
-  /* PULL REQUESTS */
-  .pr-list{display:flex;flex-direction:column;gap:6px}
-  .pr{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:8px}
-  .pr-status{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-  .ps-open{background:var(--accent)}.ps-review{background:var(--accent2)}.ps-merged{background:#A97BFF}
-  .pr-info{flex:1}
-  .pr-title{font-size:12px;color:var(--text);font-weight:500;line-height:1.3}
-  .pr-sub{font-size:10px;color:var(--muted);font-family:'Space Mono',monospace;margin-top:2px}
-  .pr-badge{font-size:9px;padding:2px 7px;border-radius:4px;font-family:'Space Mono',monospace;border:1px solid;flex-shrink:0}
-  .pb-open{color:var(--accent);border-color:rgba(0,245,160,.3);background:rgba(0,245,160,.08)}
-  .pb-review{color:var(--accent2);border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.08)}
-  .pb-merged{color:#A97BFF;border-color:rgba(169,123,255,.3);background:rgba(169,123,255,.08)}
+Sections included:
 
-  /* ACTIVITY */
-  .activity-list{display:flex;flex-direction:column}
-  .act-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(30,45,80,.7)}
-  .act-item:last-child{border-bottom:none}
-  .act-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
-  .ai-push{background:rgba(0,245,160,0.1);border:1px solid rgba(0,245,160,0.2);color:var(--accent)}
-  .ai-pr{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2);color:var(--accent2)}
-  .ai-star{background:rgba(255,184,0,0.1);border:1px solid rgba(255,184,0,0.2);color:#FFB800}
-  .ai-fork{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.2);color:var(--accent3)}
-  .act-info{flex:1}
-  .act-title{font-size:12px;color:var(--text);line-height:1.5}
-  .act-title strong{color:var(--accent2)}
-  .act-time{font-size:10px;color:var(--muted);font-family:'Space Mono',monospace;margin-top:2px}
+Header — Avatar with initials, name, handle, and a live "Active" pulse indicator
+Stats bar — Repos, Followers, and Stars at a glance
+Contribution graph — Visual heatmap showing activity intensity across weeks
+Top Repositories — 3 pinned repos with language badges, stars, forks & last updated time
+Language Breakdown — Animated bar chart (Dart dominates at 72%, as expected!)
+Pull Requests — Open, In-Review, and Merged PRs with color-coded status dots
+Recent Activity — Push, PR, Star, and Fork events with timestamps
+Footer stats — Open issues, commits/month, and following count
+The color scheme uses a neon teal + electric blue + orange palette on a deep navy background — giving it that futuristic developer vibe. All Flutter/Dart repos are front and center!
 
-  /* FOOTER */
-  .footer{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);background:var(--bg2)}
-  .footer-stat{text-align:center}
-  .footer-num{font-size:16px;font-weight:700;font-family:'Space Mono',monospace}
-  .fn-green{color:var(--accent)}.fn-blue{color:var(--accent2)}.fn-orange{color:var(--accent3)}
-  .footer-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-top:2px}
-</style>
-</head>
-<body>
+give the code readme.md code
 
-<!-- HEADER -->
-<div class="header">
-  <div class="avatar">NN</div>
-  <div>
-    <div class="name">Naveed Nawaz</div>
-    <div class="handle">@naveed-nawaz</div>
-    <div class="role">Flutter Mobile App Developer</div>
-  </div>
-  <div class="badge"><span class="dot"></span>Active</div>
+16:46
+
+Viewed a file, created a file, read a file
+Viewed a file, created a file, read a file
+Here's your README.md — fully documented and ready to drop into your repo! It includes:
+
+Badges for UI style, Flutter, and active status
+Feature list with emoji labels for every dashboard section
+Design system table — all colors, fonts, and tokens used
+Project structure tree
+Getting started — browser open + local server options (Python & Node)
+Tech stack table — HTML/CSS/JS, Google Fonts, Tabler Icons
+Customization guide — how to swap in your real GitHub data
+Live GitHub API snippet — optional fetch integration
+ASCII layout preview — visual map of every section
+Author section with GitHub and Flutter badges
+
+Readme
+Document · MD 
+no i need the code for copy and paste in readme in github then it will give the ui
+
+16:47
+## ⚡ About Me
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Software+Developer;Flutter+%7C+React+%7C+Java+Developer;UI%2FUX+Focused+Engineer;Clean+Code+Enthusiast" />
+</p>
+---
+```yaml
+name: Naveed Nawaz
+location: Sri Lanka
+role: Software Developer
+skills:
+  - Flutter App Development
+  - React Frontend Development
+  - Java Backend Development
+  - UI/UX Design
+  - Blender 3D Modeling
+currently_learning:
+  - Advanced Flutter Architecture
+  - MERN Stack Development
+  - System Design
+work_style:
+  - Clean Code
+  - Scalable Architecture
+  - Pixel Perfect UI
+  - Performance Optimization
+mindset:
+  - "Design first, then code"
+  - "Simple solutions win"
+  - "Details create experience"
+
+like this but need to add nice ui
+
+Show more
+16:49
+Here's the full README.md code — paste it directly into your GitHub profile repo (naveed-nawaz/naveed-nawaz) and it will render beautifully:
+
+
+Ran a command, read a file
+Ran a command, read a file
+
+Write the README.md file
+
+Script
+
+Presented file
+Done
+Here's your ready-to-paste README.md. Here's how to use it on GitHub:
+
+Setup steps:
+
+Go to github.com → click + → New repository
+Name it exactly naveed-nawaz (same as your username)
+Check "Add a README file" → Create repository
+Click the pencil ✏️ edit button on the README
+Select all → Delete → Paste this entire file
+Click Commit changes — your profile will instantly update!
+What renders on your profile:
+
+Animated wave header with your name in cyan
+Typing animation (your exact text from above)
+Your yaml about block — styled exactly as you wrote it
+Tech stack badges grouped by category (Mobile / Frontend / Backend / Design)
+GitHub Stats + Top Languages cards side by side
+Contribution streak bar
+Activity graph
+Trophy showcase
+Featured project pins
+Connect badges + footer wave
+
+Readme
+Document · MD 
+
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+
+
+raw
+Readme · MD
+<div align="center">
+<!-- HEADER WAVE -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:00F7FF,100:0D1117&height=180&section=header&text=Naveed%20Nawaz&fontSize=52&fontColor=FFFFFF&fontAlignY=40&desc=Software%20Developer%20%7C%20Flutter%20%7C%20React%20%7C%20Java&descAlignY=62&descColor=00F7FF&animation=fadeIn" width="100%"/>
+<!-- TYPING ANIMATION -->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Software+Developer;Flutter+%7C+React+%7C+Java+Developer;UI%2FUX+Focused+Engineer;Clean+Code+Enthusiast" alt="Typing SVG"/>
+<br/>
+<!-- BADGES -->
+![Profile Views](https://komarev.com/ghpvc/?username=naveed-nawaz&style=for-the-badge&color=00F7FF&label=PROFILE+VIEWS)
+![Status](https://img.shields.io/badge/Status-Open%20to%20Work-00F7FF?style=for-the-badge&logo=statuspage&logoColor=0D1117)
+![Location](https://img.shields.io/badge/Location-Sri%20Lanka%20🇱🇰-FF6B6B?style=for-the-badge)
+ 
 </div>
-
-<!-- STATS -->
-<div class="stats-row">
-  <div class="stat"><div class="stat-num">47</div><div class="stat-label">Repos</div></div>
-  <div class="stat"><div class="stat-num">1.2k</div><div class="stat-label">Followers</div></div>
-  <div class="stat"><div class="stat-num">2.8k</div><div class="stat-label">Stars</div></div>
+---
+ 
+## ⚡ About Me
+ 
+```yaml
+name        : Naveed Nawaz
+location    : Sri Lanka 🇱🇰
+role        : Software Developer
+ 
+skills:
+  - Flutter App Development
+  - React Frontend Development
+  - Java Backend Development
+  - UI/UX Design
+  - Blender 3D Modeling
+ 
+currently_learning:
+  - Advanced Flutter Architecture
+  - MERN Stack Development
+  - System Design
+ 
+work_style:
+  - Clean Code
+  - Scalable Architecture
+  - Pixel Perfect UI
+  - Performance Optimization
+ 
+mindset:
+  - "Design first, then code"
+  - "Simple solutions win"
+  - "Details create experience"
+```
+ 
+---
+ 
+## 🛠️ Tech Stack
+ 
+<div align="center">
+**Mobile**
+ 
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+ 
+**Frontend**
+ 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+ 
+**Backend**
+ 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+ 
+**Design & Tools**
+ 
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+ 
 </div>
-
-<!-- CONTRIBUTIONS -->
-<div class="section">
-  <div class="sec-header">
-    <span class="sec-title">Contributions</span>
-    <span class="sec-tag">1,847 this year</span>
-  </div>
-  <div class="contrib-grid" id="cgrid"></div>
-  <div class="contrib-footer">
-    <span class="contrib-total mono">Mar — Jun 2026</span>
-    <div class="legend">
-      <span>Less</span>
-      <div class="lg" style="background:var(--bg3)"></div>
-      <div class="lg c1"></div><div class="lg c2"></div><div class="lg c3"></div><div class="lg c4"></div>
-      <span>More</span>
-    </div>
-  </div>
+---
+ 
+## 📊 GitHub Stats
+ 
+<div align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=naveed-nawaz&show_icons=true&theme=transparent&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=12&include_all_commits=true&count_private=true" height="180"/>
+&nbsp;&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=naveed-nawaz&layout=compact&theme=transparent&bg_color=0D1117&title_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=12&langs_count=6" height="180"/>
+<br/><br/>
+ 
+<img src="https://github-readme-streak-stats.herokuapp.com?user=naveed-nawaz&theme=dark&background=0D1117&ring=00F7FF&fire=FF6B6B&currStreakLabel=00F7FF&sideLabels=8B949E&dates=484F58&border=30363D&border_radius=12" width="68%"/>
 </div>
-
-<div class="divider"></div>
-
-<!-- TOP REPOS -->
-<div class="section">
-  <div class="sec-header">
-    <span class="sec-title">Top Repositories</span>
-    <span class="sec-tag">Pinned</span>
-  </div>
-  <div class="repo-list">
-    <div class="repo">
-      <div class="repo-top">
-        <span class="repo-name">flutter_ui_kit</span>
-        <span class="repo-lang lang-dart">Dart</span>
-      </div>
-      <div class="repo-desc">Futuristic component library for Flutter with glassmorphism, neon effects & adaptive theming.</div>
-      <div class="repo-meta">
-        <span class="meta-item"><span class="star-icon">★</span> 847</span>
-        <span class="meta-item"><span class="fork-icon">⑂</span> 124</span>
-        <span class="updated">2 days ago</span>
-      </div>
-    </div>
-    <div class="repo">
-      <div class="repo-top">
-        <span class="repo-name">nav_animations</span>
-        <span class="repo-lang lang-dart">Dart</span>
-      </div>
-      <div class="repo-desc">Custom route transitions & page animations package for Flutter apps.</div>
-      <div class="repo-meta">
-        <span class="meta-item"><span class="star-icon">★</span> 392</span>
-        <span class="meta-item"><span class="fork-icon">⑂</span> 67</span>
-        <span class="updated">5 days ago</span>
-      </div>
-    </div>
-    <div class="repo">
-      <div class="repo-top">
-        <span class="repo-name">shop_app_flutter</span>
-        <span class="repo-lang lang-kt">Kotlin</span>
-      </div>
-      <div class="repo-desc">Full-stack e-commerce app with Riverpod state management & Firebase backend.</div>
-      <div class="repo-meta">
-        <span class="meta-item"><span class="star-icon">★</span> 218</span>
-        <span class="meta-item"><span class="fork-icon">⑂</span> 43</span>
-        <span class="updated">1 week ago</span>
-      </div>
-    </div>
-  </div>
+---
+ 
+## 📈 Contribution Graph
+ 
+<div align="center">
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=naveed-nawaz&bg_color=0D1117&color=00F7FF&line=00F7FF&point=FF6B6B&area=true&area_color=00F7FF&hide_border=false&border_color=30363D&radius=8)](https://github.com/ashutosh00710/github-readme-activity-graph)
+ 
 </div>
-
-<div class="divider"></div>
-
-<!-- LANGUAGE BARS -->
-<div class="section">
-  <div class="sec-header">
-    <span class="sec-title">Language Breakdown</span>
-  </div>
-  <div class="lang-bars">
-    <div class="lang-row">
-      <span class="lang-name">Dart</span>
-      <div class="lang-bar-wrap"><div class="lang-bar lb-dart" style="width:72%"></div></div>
-      <span class="lang-pct">72%</span>
-    </div>
-    <div class="lang-row">
-      <span class="lang-name">Kotlin</span>
-      <div class="lang-bar-wrap"><div class="lang-bar lb-kt" style="width:14%"></div></div>
-      <span class="lang-pct">14%</span>
-    </div>
-    <div class="lang-row">
-      <span class="lang-name">JS</span>
-      <div class="lang-bar-wrap"><div class="lang-bar lb-js" style="width:8%"></div></div>
-      <span class="lang-pct">8%</span>
-    </div>
-    <div class="lang-row">
-      <span class="lang-name">Python</span>
-      <div class="lang-bar-wrap"><div class="lang-bar lb-py" style="width:6%"></div></div>
-      <span class="lang-pct">6%</span>
-    </div>
-  </div>
+---
+ 
+## 🏆 GitHub Trophies
+ 
+<div align="center">
+[![trophy](https://github-profile-trophy.vercel.app/?username=naveed-nawaz&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&column=6)](https://github.com/ryo-ma/github-profile-trophy)
+ 
 </div>
-
-<div class="divider"></div>
-
-<!-- PULL REQUESTS -->
-<div class="section">
-  <div class="sec-header">
-    <span class="sec-title">Pull Requests</span>
-    <span class="sec-tag">3 active</span>
-  </div>
-  <div class="pr-list">
-    <div class="pr">
-      <div class="pr-status ps-open"></div>
-      <div class="pr-info">
-        <div class="pr-title">Add dark mode tokens to ui_kit</div>
-        <div class="pr-sub">flutter_ui_kit · #83 · opened 3h ago</div>
-      </div>
-      <span class="pr-badge pb-open">Open</span>
-    </div>
-    <div class="pr">
-      <div class="pr-status ps-review"></div>
-      <div class="pr-info">
-        <div class="pr-title">Refactor navigation state logic</div>
-        <div class="pr-sub">nav_animations · #21 · 2 reviews</div>
-      </div>
-      <span class="pr-badge pb-review">Review</span>
-    </div>
-    <div class="pr">
-      <div class="pr-status ps-merged"></div>
-      <div class="pr-info">
-        <div class="pr-title">Fix iOS safe area insets</div>
-        <div class="pr-sub">shop_app_flutter · #67 · merged yesterday</div>
-      </div>
-      <span class="pr-badge pb-merged">Merged</span>
-    </div>
-  </div>
+---
+ 
+## 📌 Featured Projects
+ 
+<div align="center">
+[![flutter_ui_kit](https://github-readme-stats.vercel.app/api/pin/?username=naveed-nawaz&repo=flutter_ui_kit&theme=transparent&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=10)](https://github.com/naveed-nawaz/flutter_ui_kit)
+&nbsp;
+[![nav_animations](https://github-readme-stats.vercel.app/api/pin/?username=naveed-nawaz&repo=nav_animations&theme=transparent&bg_color=0D1117&title_color=00F7FF&icon_color=00F7FF&text_color=C9D1D9&border_color=30363D&border_radius=10)](https://github.com/naveed-nawaz/nav_animations)
+ 
 </div>
-
-<div class="divider"></div>
-
-<!-- ACTIVITY FEED -->
-<div class="section">
-  <div class="sec-header">
-    <span class="sec-title">Recent Activity</span>
-  </div>
-  <div class="activity-list">
-    <div class="act-item">
-      <div class="act-icon ai-push">↑</div>
-      <div class="act-info">
-        <div class="act-title">Pushed 3 commits to <strong>flutter_ui_kit</strong> — glassmorphism widget update</div>
-        <div class="act-time">2 hours ago</div>
-      </div>
-    </div>
-    <div class="act-item">
-      <div class="act-icon ai-pr">⊕</div>
-      <div class="act-info">
-        <div class="act-title">Opened PR <strong>#83</strong> in flutter_ui_kit</div>
-        <div class="act-time">3 hours ago</div>
-      </div>
-    </div>
-    <div class="act-item">
-      <div class="act-icon ai-star">★</div>
-      <div class="act-info">
-        <div class="act-title">Starred <strong>flutter/flutter</strong> repository</div>
-        <div class="act-time">Yesterday</div>
-      </div>
-    </div>
-    <div class="act-item">
-      <div class="act-icon ai-fork">⑂</div>
-      <div class="act-info">
-        <div class="act-title">Forked <strong>riverpod_examples</strong> by rrousselGit</div>
-        <div class="act-time">2 days ago</div>
-      </div>
-    </div>
-  </div>
+---
+ 
+## 🤝 Connect
+ 
+<div align="center">
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Naveed%20Nawaz-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/naveed-nawaz)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Site-00F7FF?style=for-the-badge&logo=vercel&logoColor=0D1117)](https://naveeddev.com)
+[![Email](https://img.shields.io/badge/Email-Say%20Hello-FF6B6B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:naveed@example.com)
+ 
 </div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="footer-stat"><div class="footer-num fn-green">24</div><div class="footer-label">Issues Open</div></div>
-  <div class="footer-stat"><div class="footer-num fn-blue">156</div><div class="footer-label">Commits/mo</div></div>
-  <div class="footer-stat"><div class="footer-num fn-orange">8</div><div class="footer-label">Following</div></div>
+---
+ 
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:00F7FF,100:0D1117&height=120&section=footer" width="100%"/>
+*"Design first, then code. Simple solutions win. Details create experience."*
+ 
+⭐ **Star my repos if you find them useful!**
+ 
 </div>
-
-<script>
-  // Generate contribution heatmap
-  const grid = document.getElementById('cgrid');
-  const pattern = [0,0,1,1,2,2,3,4,3,2,1,0,1,2,3,4,4,3,2,1,2,3,4,3,2,1];
-  pattern.forEach(w => {
-    const d = document.createElement('div');
-    d.className = 'cell' + (w ? ` c${w}` : '');
-    grid.appendChild(d);
-  });
-</script>
-</body>
-</html>
+ 
